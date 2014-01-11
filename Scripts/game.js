@@ -18,6 +18,9 @@ var maxScore = 7;
 // set opponent reflexes (0 - easiest, 1 - hardest)
 var difficulty = 0.2;
 
+// initialize pause boolean, to be altered based on space bar press
+var paused = false;
+
 // ------------------------------------- //
 // ------- GAME FUNCTIONS -------------- //
 // ------------------------------------- //
@@ -37,6 +40,17 @@ function setup()
         // and let's get cracking!
         draw();
 }
+
+function pause(pause_state) {
+    if (pause_state) {
+        // NEED TO DEFINE ELEMENT TO APPEND/UNAPPEND
+        // UNAPPEND PAUSE NOTIFICATION ELEMENT
+    } else {
+        // APPEND PAUSE NOTIFICATION ELEMENT
+    }
+    pause_state = !pause_state;
+}
+
 
 function createScene()
 {
@@ -334,7 +348,7 @@ function createScene()
         
         
         // finish by adding a ground plane
-        // to show off pretty shadows
+        // to show off shadows
         var ground = new THREE.Mesh(
 
           new THREE.CubeGeometry( 
